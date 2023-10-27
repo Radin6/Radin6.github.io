@@ -48,3 +48,7 @@ Header,
     rgba(36, 36, 36, 0) 100%
   );
 }
+
+.project + .project {
+  margin-top: 20px;
+}
