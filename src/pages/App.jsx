@@ -15,7 +15,9 @@ function App() {
         <Projects>
           <Project
             title={'Web3 Bank Project v1'}
-            href={'./src/pages/bank-project/index.html'}
+            href={
+              'https://radin6.github.io/portfolio-projects/bank-project/bank-project.html'
+            }
             text={
               'This is a simple Smart contract and Webpage that simulate a Bank.\
               Back-End: Solidity, Javascript, Front-End: Javascript, HTML and CSS'
