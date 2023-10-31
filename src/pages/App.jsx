@@ -14,7 +14,16 @@ function App() {
         <AboutMe />
         <Projects>
           <Project
-            title={'Web3 Bank Project v1'}
+            title={'Servi'}
+            href={'#'}
+            text={
+              'I am actually working in this project as Front End Dev. Servi connects freelancers to people or businesses looking to hire, with a wide range of services.'
+            }
+            imgurl={'./servi.png'}
+            alt={'profile pic'}
+          />
+          <Project
+            title={'Web3 Bank Project'}
             href={
               'https://radin6.github.io/portfolio-projects/bank-project/bank-project.html'
             }
