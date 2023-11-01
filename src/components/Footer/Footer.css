@@ -1,2 +1,19 @@
 .footer {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.footer-content {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 10px;
+  width: 200px;
+}
+
+.footer-content a:hover {
+  background: rgba(256, 0, 0, 0.2);
+  border-radius: 5px;
 }

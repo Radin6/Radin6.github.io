@@ -38,7 +38,8 @@ hr {
 
 Header,
 .about-me,
-.projects {
+.projects,
+.footer {
   background: rgb(36, 36, 36);
   background: linear-gradient(
     90deg,
