@@ -21,7 +21,16 @@ function App() {
               'I am actually working in this project as Front End Dev. Servi connects freelancers to people or businesses looking to hire, with a wide range of services.'
             }
             imgurl={'./servi.png'}
-            alt={'profile pic'}
+            alt={'servi platform screenshot'}
+          />
+          <Project
+            title={'News App'}
+            href={'https://radin6.github.io/news-app/'}
+            text={
+              'It is a web where you search for news by text input, category, language, country and even sorting them. This use the API of gnews.io'
+            }
+            imgurl={'./news-app.jpg'}
+            alt={'news app sreenshot'}
           />
           <Project
             title={'Web3 Bank Project'}
@@ -33,14 +42,14 @@ function App() {
               Back-End: Solidity, Javascript, Front-End: Javascript, HTML and CSS'
             }
             imgurl={'./web3-bank.png'}
-            alt={'profile pic'}
+            alt={'blockchain bank screenshot'}
           />
           <Project
             title={'Calculator'}
             href={'https://radin6.github.io/calculator-app/'}
             text={'It is a Calculator made with React JS'}
             imgurl={'./calculator.jpg'}
-            alt={'profile pic'}
+            alt={'calculator picture'}
           />
         </Projects>
       </main>
