@@ -16,12 +16,13 @@ function App() {
         <Projects>
           <Project
             title={'Servi'}
-            href={'#'}
+            href={'#projects'}
             text={
               'I am actually working in this project as Front End Dev. Servi connects freelancers to people or businesses looking to hire, with a wide range of services.'
             }
             imgurl={'./servi.png'}
             alt={'servi platform screenshot'}
+            target={''}
           />
           <Project
             title={'News App'}
@@ -31,6 +32,7 @@ function App() {
             }
             imgurl={'./news-app.jpg'}
             alt={'news app sreenshot'}
+            target={'_blank'}
           />
           <Project
             title={'Web3 Bank Project'}
@@ -43,6 +45,7 @@ function App() {
             }
             imgurl={'./web3-bank.png'}
             alt={'blockchain bank screenshot'}
+            target={'_blank'}
           />
           <Project
             title={'Calculator'}
@@ -50,6 +53,7 @@ function App() {
             text={'It is a Calculator made with React JS'}
             imgurl={'./calculator.jpg'}
             alt={'calculator picture'}
+            target={'_blank'}
           />
         </Projects>
       </main>

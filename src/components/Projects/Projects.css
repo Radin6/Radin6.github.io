@@ -27,7 +27,15 @@
   width: max-content;
 }
 
+.project-pic img:hover {
+  transform: scale(1.1);
+  box-shadow: 0 0 10px rgb(122, 31, 31);
+}
+
 .project-pic > img {
+  border-radius: 10px;
+  transition: transform 0.25s ease;
+  box-shadow: 0 0 10px rgb(114, 114, 114);
   width: 200px;
   padding: 0;
   margin-left: auto;

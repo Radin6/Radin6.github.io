@@ -1,4 +1,3 @@
 https://dann-portfolio.netlify.app/
 https://diagram.com/?ref=onepagelove
 https://profy.dev/article/react-folder-structure
-https://vitejs.dev/guide/

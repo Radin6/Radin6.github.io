@@ -13,7 +13,12 @@
   width: 200px;
 }
 
-.footer-content a:hover {
+.footer-content a > * {
+  transition: transform 0.25s ease;
+}
+
+.footer-content a > *:hover {
   background: rgba(256, 0, 0, 0.2);
   border-radius: 5px;
+  transform: scale(1.1);
 }
