@@ -117,7 +117,7 @@ function Projects() {
           freelancers to people or businesses looking to hire, with a wide range
           of services.
           <p className="text-slate-400 text-sm m-2">
-            It is built using:
+            Made with:
             <div className="flex flex-wrap gap-2">
             <JS /><React /><Next /><Chakra />
             </div>
@@ -132,7 +132,7 @@ function Projects() {
           It is a web where you search for news by text input, category,
           language, country and even sorting them. This use the API of gnews.io
           <p className="text-slate-400 text-sm m-2">
-            It is built using:
+            Made with:
             <div className="flex flex-wrap gap-2">
             <React /><JS />
             </div>
@@ -147,7 +147,7 @@ function Projects() {
           This is a simple Smart contract and Webpage that simulate a Bank.
           Back-End: Solidity, Javascript, Front-End: Javascript, HTML and CSS
           <p className="text-slate-400 text-sm m-2">
-            It is built using:
+            Made with:
             <div className="flex flex-wrap gap-2">
             <JS /><Solidity />
             </div>
