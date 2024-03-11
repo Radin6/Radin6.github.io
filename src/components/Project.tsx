@@ -1,4 +1,12 @@
-export function Project({ children, position, src, title, href }) {
+interface ProjectProps {
+  children?: React.ReactNode,
+  position: 'left' | 'right',
+  src: string,
+  title: string,
+  href: string,
+}
+
+export function Project({ children, position, src, title, href } : ProjectProps) {
   return (
     <a href={href} target="_blank" className="">
       <article className="p-3 my-3 border-[1px] border-red-800 rounded-lg hover:bg-white hover:bg-opacity-5 ">

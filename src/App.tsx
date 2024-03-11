@@ -1,3 +1,5 @@
+import { ReactNode } from 'react'
+
 import profilePicture from "./assets/profile-pic.png";
 import web3BankPic from "./assets/web3-bank.png";
 import serviPic from "./assets/servi.png";
@@ -16,7 +18,12 @@ import {
 } from "./components/Badge";
 import { Project } from "./components/Project";
 
-const Article = ({ children, title }) => {
+interface ArticleProps {
+  children?: ReactNode,
+  title: string,
+}
+
+const Article = ({ children, title } : ArticleProps) => {
   return (
     <article className="mt-4">
       <h3 className="text-white text-xl">{title}</h3>
