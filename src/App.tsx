@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { ReactNode } from 'react'
 
 import profilePicture from "./assets/profile-pic.png";
 import web3BankPic from "./assets/web3-bank.png";
@@ -15,16 +15,15 @@ import {
   React,
   Chakra,
   Tailwind,
-} from "./components/Badge/Badge";
-import { BadgeClear } from "./components/Badge/BadgeClear";
+} from "./components/Badge";
 import { Project } from "./components/Project";
 
 interface ArticleProps {
-  children?: ReactNode;
-  title: string;
+  children?: ReactNode,
+  title: string,
 }
 
-const Article = ({ children, title }: ArticleProps) => {
+const Article = ({ children, title } : ArticleProps) => {
   return (
     <article className="mt-4">
       <h3 className="text-white text-xl">{title}</h3>
@@ -42,25 +41,21 @@ function Main() {
       <div className="flex flex-col mx-4 md:flex-row md:w-[60%]">
         <div className="">
           <h1 className="text-4xl text-white">Hi, I am Nicolás</h1>
-          <h1 className="text-4xl text-red-800 font-bold">
-            Front End Developer
-          </h1>
+          <h1 className="text-4xl text-red-800 font-bold">Front End Developer</h1>
           <p className="text-white text-lg mt-2">
             I'm a junior Front End Developer based in Italy. I'm currently
             working as Front End at Servi and studying a long-term Full Stack
             Development course taught by university professors.
           </p>
-          <a href="cv-en.pdf" download>
-            <button className="border-[1px] border-red-800 rounded-md p-1 my-3 text-red-800 hover:bg-white hover:bg-opacity-5 ">
-              Get my resumee
-            </button>
-          </a>
+          <button className="border-[1px] border-red-800 rounded-md p-1 my-3 text-red-800 hover:bg-white hover:bg-opacity-5 ">
+            Get my resumee
+          </button>
         </div>
-        <div className="w-full">
+        <div className="grow w-full">
           <img
             src={profilePicture}
             alt="profile picture"
-            className="w-[150px] md:w-[180px] rounded-full m-auto"
+            className="w-[150px] md:w-[180px] rounded-full"
           />
         </div>
       </div>
@@ -72,54 +67,47 @@ function AboutMe() {
   return (
     <section
       id="about-me"
-      className="flex flex-col items-center"
+      className="flex flex-col items-center min-h-screen mb-20"
     >
       <div className="flex flex-col mx-4 md:w-[60%]">
         <hr className="border-[1px] border-white w-full" />
         <h2 className="text-3xl text-white text-center">About Me</h2>
         <Article title="Past">
-          I have always liked exact sciences that's why I became chemistry
-          technician and then food industry technician. Despite I like there is
-          nothing to innovate in this area so I decided to transition to web
-          development as it is governed by rules like the exact sciences but is
-          open to innovation and creativity. Above all it is a changing world
-          and there is much to discover.
+          I always liked exact sciences that's why I became chemistry technician
+          and then food industry technician. While I like there is nothing to
+          innovate in this area so I decided to transition to web development as
+          it is governed by rules like the exact sciences but is open to
+          innovation and creativity. Above all it is a changing world and there
+          is much to discover.
         </Article>
         <Article title="Present">
           I am currently working on a project called Servi that is a marketplace
-          for freelance job and at the same time I am studying a full stack
-          development course specialized in blockchain. I’m also working on a
-          course teaching individually and in groups about blockchain technology
-          and how to interact with it.
+          for freelance job and at the same time I am studying full stack
+          development specialized in blockchain. I’m also working on a course
+          teaching individually and in groups about blockchain technology and
+          how to interact with it.
         </Article>
         <Article title="Future">
           In the future I find myself specializing in branches of development
           that interest me since I like continuous learning. Especially by
           bringing that knowledge into projects you’re working on.
         </Article>
-      </div>
-    </section>
-  );
-}
-
-function Skills() {
-  return (
-    <section className="my-20 px-4 py-10 bg-[#171616]">
-      <h2 className="text-3xl text-white text-center mt-3">Languages</h2>
-      <div className="flex gap-1 justify-center my-3 flex-wrap">
-        <Python />
-        <JS />
-        <TS />
-        <Solidity />
-      </div>
-      <h2 className="text-3xl text-white text-center mt-3">Technologies</h2>
-      <div className="flex gap-1 justify-center my-3 flex-wrap">
-        <React />
-        <Next />
-        <HTML />
-        <CSS />
-        <Chakra />
-        <Tailwind />
+        <h2 className="text-3xl text-white text-center mt-3">Languages</h2>
+        <div className="flex gap-1 justify-center my-3 flex-wrap">
+          <Python />
+          <JS />
+          <TS />
+          <Solidity />
+        </div>
+        <h2 className="text-3xl text-white text-center mt-3">Technologies</h2>
+        <div className="flex gap-1 justify-center my-3 flex-wrap">
+          <React />
+          <Next />
+          <HTML />
+          <CSS />
+          <Chakra />
+          <Tailwind />
+        </div>
       </div>
     </section>
   );
@@ -132,17 +120,13 @@ function Projects() {
         <hr className="border-[1px] border-white w-full" />
         <h2 className="text-3xl text-white text-center">Projects</h2>
         <Project position="left" title="Servi" src={serviPic} href="">
-          I am actually working in this project as Front End Developer. Servi
-          connects freelancers to people or businesses looking to hire, with a
-          wide range of services.
+          I am actually working in this project as Front End Dev. Servi connects
+          freelancers to people or businesses looking to hire, with a wide range
+          of services.
           <p className="text-slate-400 text-sm m-2">
             Made with:
             <div className="flex flex-wrap gap-2">
-              <BadgeClear>JavaScript</BadgeClear>
-              <BadgeClear>React JS</BadgeClear>
-              <BadgeClear>Next JS</BadgeClear>
-              <BadgeClear>Tailwind CSS</BadgeClear>
-              <BadgeClear>Zustand</BadgeClear>
+            <JS /><React /><Next /><Chakra />
             </div>
           </p>
         </Project>
@@ -157,8 +141,7 @@ function Projects() {
           <p className="text-slate-400 text-sm m-2">
             Made with:
             <div className="flex flex-wrap gap-2">
-              <BadgeClear>JavaScript</BadgeClear>
-              <BadgeClear>React JS</BadgeClear>
+            <React /><JS />
             </div>
           </p>
         </Project>
@@ -173,8 +156,7 @@ function Projects() {
           <p className="text-slate-400 text-sm m-2">
             Made with:
             <div className="flex flex-wrap gap-2">
-              <BadgeClear>JavaScript</BadgeClear>
-              <BadgeClear>Solidity</BadgeClear>
+            <JS /><Solidity />
             </div>
           </p>
         </Project>
@@ -188,7 +170,6 @@ function App() {
     <div className="bg-gradient-to-r from-[#171717] to-[#2E0202]">
       <Main />
       <AboutMe />
-      <Skills />
       <Projects />
     </div>
   );
