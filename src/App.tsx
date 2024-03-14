@@ -16,6 +16,7 @@ import {
   Chakra,
   Tailwind,
 } from "./components/Badge/Badge";
+import SocialsMenu from "./components/SocialsMenu";
 import { BadgeClear } from "./components/Badge/BadgeClear";
 import { Project } from "./components/Project";
 
@@ -39,7 +40,7 @@ function Main() {
       id="first-page"
       className="flex min-h-screen justify-center items-center"
     >
-      <div className="flex flex-col mx-4 md:flex-row md:w-[60%]">
+      <div className="max-w-[600px] flex flex-col mx-4 md:flex-row md:w-[60%]">
         <div className="">
           <h1 className="text-4xl text-white">Hi, I am Nicolás</h1>
           <h1 className="text-4xl text-red-800 font-bold">
@@ -71,7 +72,7 @@ function Main() {
 function AboutMe() {
   return (
     <section id="about-me" className="flex flex-col items-center">
-      <div className="flex flex-col mx-4 md:w-[60%]">
+      <div className="flex max-w-[600px] flex-col mx-4 md:w-[60%]">
         <hr className="border-[1px] border-white w-full" />
         <h2 className="text-3xl text-white text-center">About Me</h2>
         <Article title="Past">
@@ -126,7 +127,7 @@ function Skills() {
 function Projects() {
   return (
     <section id="projects" className="flex flex-col items-center">
-      <div className="flex flex-col mx-4 md:w-[60%]">
+      <div className="flex max-w-[600px] flex-col mx-4 md:w-[60%]">
         <hr className="border-[1px] border-white w-full" />
         <h2 className="text-3xl text-white text-center">Projects</h2>
         <Project position="left" title="Servi" src={serviPic} href="">
@@ -184,6 +185,7 @@ function Projects() {
 function App() {
   return (
     <div className="bg-gradient-to-r from-[#171717] to-[#2E0202]">
+      <SocialsMenu/>
       <Main />
       <AboutMe />
       <Skills />
