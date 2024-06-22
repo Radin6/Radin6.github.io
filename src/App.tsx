@@ -20,6 +20,7 @@ import {
 import SocialsMenu from "./components/SocialsMenu";
 import { BadgeClear } from "./components/Badge/BadgeClear";
 import { Project } from "./components/Project";
+import toast, { Toaster } from 'react-hot-toast';
 
 interface ArticleProps {
   children?: ReactNode;
@@ -131,7 +132,7 @@ function Projects() {
       <div className="flex max-w-[600px] flex-col mx-4 md:w-[60%]">
         <hr className="border-[1px] border-white w-full" />
         <h2 className="text-3xl text-white text-center">Projects</h2>
-        <Project position="left" title="Servi" src={serviPic} href="">
+        <Project position="left" title="Servi" src={serviPic} href="#projects" onClick={()=>{toast.error("not available to show because is a private project at the moment")}}>
           I am actually working in this project as Front End Developer. Servi
           connects freelancers to people or businesses looking to hire, with a
           wide range of services.
@@ -151,6 +152,7 @@ function Projects() {
           title="News App"
           src={newsApp}
           href="https://radin6.github.io/news-app/"
+          targetBlank
         >
           It is a web where you search for news by text input, category,
           language, country and even sorting them. This use the API of gnews.io
@@ -162,7 +164,7 @@ function Projects() {
             </div>
           </p>
         </Project>
-        <Project position="left" title="Real Time Chat" src={onlineChat} href="https://real-time-chat-app-vhjf.onrender.com/">
+        <Project position="left" title="Real Time Chat" src={onlineChat} href="https://real-time-chat-app-vhjf.onrender.com/" targetBlank>
           This is a simple online chat application using HTML, CSS, and JavaScript with Socket.IO for real-time communication.
           You get an username and is stored in localStorage. You can open 2 browser and give a try to the chat.
           <p className="text-slate-400 text-sm m-2">
@@ -181,6 +183,7 @@ function Projects() {
           title="Web3 Bank"
           src={web3BankPic}
           href="https://radin6.github.io/portfolio-projects/bank-project/bank-project.html"
+          targetBlank
         >
           This is a simple Smart contract and Webpage that simulate a Bank.
           Back-End: Solidity, Javascript, Front-End: Javascript, HTML and CSS

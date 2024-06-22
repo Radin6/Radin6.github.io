@@ -4,11 +4,14 @@ interface ProjectProps {
   src: string,
   title: string,
   href: string,
+  targetBlank?: boolean,
+  onClick?: React.MouseEventHandler<HTMLAnchorElement>;
+  className?: string
 }
 
-export function Project({ children, position, src, title, href } : ProjectProps) {
+export function Project({ children, position, src, title, href, targetBlank, onClick, className = "" } : ProjectProps) {
   return (
-    <a href={href} target="_blank" className="">
+    <a href={href} target={targetBlank ? "_blank" : ""} className={className} onClick={onClick}>
       <article className="p-3 my-3 border-[1px] border-red-800 rounded-lg hover:bg-white hover:bg-opacity-5 transition ease-in-out delay-100">
         <h4 className="text-white font-bold text-xl text-center">{title}</h4>
         <div
