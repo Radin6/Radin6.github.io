@@ -4,6 +4,7 @@ import profilePicture from "./assets/profile-pic.png";
 import web3BankPic from "./assets/web3-bank.png";
 import serviPic from "./assets/servi.png";
 import newsApp from "./assets/news-app.jpg";
+import onlineChat from "./assets/online-chat.png"
 import {
   Solidity,
   Python,
@@ -13,8 +14,8 @@ import {
   CSS,
   Next,
   React,
-  Chakra,
   Tailwind,
+  Github
 } from "./components/Badge/Badge";
 import SocialsMenu from "./components/SocialsMenu";
 import { BadgeClear } from "./components/Badge/BadgeClear";
@@ -28,7 +29,7 @@ interface ArticleProps {
 const Article = ({ children, title }: ArticleProps) => {
   return (
     <article className="mt-4">
-      <h3 className="text-white text-xl">{title}</h3>
+      <h3 className="text-red-800 font-bold text-xl">{title}</h3>
       <p className="text-white">{children}</p>
     </article>
   );
@@ -52,7 +53,7 @@ function Main() {
             Development course taught by university professors.
           </p>
           <a href="cv-en.pdf" download>
-            <button className="border-[1px] border-red-800 rounded-md p-1 my-3 text-red-800 hover:bg-white hover:bg-opacity-5 ">
+            <button className="border-[1px] border-red-800 rounded-md p-1 my-3 text-red-800 hover:bg-white hover:bg-opacity-5 transition ease-in-out delay-100">
               Get my resumee
             </button>
           </a>
@@ -106,10 +107,10 @@ function Skills() {
     <section className="my-20 px-4 py-10 bg-[#171616]">
       <h2 className="text-3xl text-white text-center mt-3">Languages</h2>
       <div className="flex gap-1 justify-center my-3 flex-wrap">
-        <Python />
         <JS />
         <TS />
         <Solidity />
+        <Python />
       </div>
       <h2 className="text-3xl text-white text-center mt-3">Technologies</h2>
       <div className="flex gap-1 justify-center my-3 flex-wrap">
@@ -117,8 +118,8 @@ function Skills() {
         <Next />
         <HTML />
         <CSS />
-        <Chakra />
         <Tailwind />
+        <Github />
       </div>
     </section>
   );
@@ -161,8 +162,22 @@ function Projects() {
             </div>
           </p>
         </Project>
+        <Project position="left" title="Real Time Chat" src={onlineChat} href="https://real-time-chat-app-vhjf.onrender.com/">
+          This is a simple online chat application using HTML, CSS, and JavaScript with Socket.IO for real-time communication.
+          You get an username and is stored in localStorage. You can open 2 browser and give a try to the chat.
+          <p className="text-slate-400 text-sm m-2">
+            Made with:
+            <div className="flex flex-wrap gap-2">
+              <BadgeClear>Node JS</BadgeClear>
+              <BadgeClear>Sockets.IO</BadgeClear>
+              <BadgeClear>Express</BadgeClear>
+              <BadgeClear>HTML</BadgeClear>
+              <BadgeClear>CSS</BadgeClear>
+            </div>
+          </p>
+        </Project>
         <Project
-          position="left"
+          position="right"
           title="Web3 Bank"
           src={web3BankPic}
           href="https://radin6.github.io/portfolio-projects/bank-project/bank-project.html"

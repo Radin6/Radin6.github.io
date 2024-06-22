@@ -55,3 +55,9 @@ export function Tailwind() {
     <img className="h-[30px]" src="https://img.shields.io/badge/-Tailwind%20CSS-06B6D4?logo=tailwindcss&logoColor=white" />
   );
 }
+
+export function Github() {
+  return (
+    <img className="h-[30px]" src="https://img.shields.io/badge/-Github-181717?logo=github" alt="" />
+  )
+}

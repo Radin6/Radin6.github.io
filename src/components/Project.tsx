@@ -9,7 +9,7 @@ interface ProjectProps {
 export function Project({ children, position, src, title, href } : ProjectProps) {
   return (
     <a href={href} target="_blank" className="">
-      <article className="p-3 my-3 border-[1px] border-red-800 rounded-lg hover:bg-white hover:bg-opacity-5 ">
+      <article className="p-3 my-3 border-[1px] border-red-800 rounded-lg hover:bg-white hover:bg-opacity-5 transition ease-in-out delay-100">
         <h4 className="text-white font-bold text-xl text-center">{title}</h4>
         <div
           className={`flex flex-col md:flex-row ${
