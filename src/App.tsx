@@ -20,7 +20,7 @@ import {
 import SocialsMenu from "./components/SocialsMenu";
 import { BadgeClear } from "./components/Badge/BadgeClear";
 import { Project } from "./components/Project";
-import toast, { Toaster } from 'react-hot-toast';
+import toast from 'react-hot-toast';
 
 interface ArticleProps {
   children?: ReactNode;
