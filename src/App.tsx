@@ -5,18 +5,8 @@ import web3BankPic from "./assets/web3-bank.png";
 import serviPic from "./assets/servi.png";
 import newsApp from "./assets/news-app.jpg";
 import onlineChat from "./assets/online-chat.png"
-import {
-  Solidity,
-  Python,
-  JS,
-  TS,
-  HTML,
-  CSS,
-  Next,
-  React,
-  Tailwind,
-  Github
-} from "./components/Badge/Badge";
+import ticketingSystem from "./assets/ticketing-system.png"
+import { Solidity, Python, JS, TS, HTML, CSS, Next, React, Tailwind, Github } from "./components/Badge/Badge";
 import SocialsMenu from "./components/SocialsMenu";
 import { BadgeClear } from "./components/Badge/BadgeClear";
 import { Project } from "./components/Project";
@@ -164,7 +154,34 @@ function Projects() {
             </div>
           </p>
         </Project>
-        <Project position="left" title="Real Time Chat" src={onlineChat} href="https://real-time-chat-app-vhjf.onrender.com/" targetBlank>
+        <Project
+          position="left"
+          title="Ticketing System (Under develop)"
+          src={ticketingSystem}
+          href="https://radin6.github.io/ticketing-system-front/"
+          targetBlank
+        >
+          This is Ticketing system app where you can generate a user, 
+          log in and create tickets. I used Node JS and Express on the Back-End.
+          It uses JWT to sing and save the user info on the cookies.
+          On the Front-End I used Tailwind CSS, React and Typescript.
+          <p className="text-slate-400 text-sm m-2">
+            Made on the Back-End with:
+            <div className="flex flex-wrap gap-2">
+              <BadgeClear>Node JS</BadgeClear>
+              <BadgeClear>Express</BadgeClear>
+            </div>
+          </p>
+          <p className="text-slate-400 text-sm m-2">
+            Made on the Fron-End with:
+            <div className="flex flex-wrap gap-2">
+              <BadgeClear>React JS</BadgeClear>
+              <BadgeClear>TypeScript</BadgeClear>
+              <BadgeClear>Tailwind CSS</BadgeClear>
+            </div>
+          </p>
+        </Project>
+        <Project position="right" title="Real Time Chat" src={onlineChat} href="https://real-time-chat-app-vhjf.onrender.com/" targetBlank>
           This is a simple online chat application using HTML, CSS, and JavaScript with Socket.IO for real-time communication.
           You get an username and is stored in localStorage. You can open 2 browser and give a try to the chat.
           <p className="text-slate-400 text-sm m-2">
@@ -179,7 +196,7 @@ function Projects() {
           </p>
         </Project>
         <Project
-          position="right"
+          position="left"
           title="Web3 Bank"
           src={web3BankPic}
           href="https://radin6.github.io/portfolio-projects/bank-project/bank-project.html"
