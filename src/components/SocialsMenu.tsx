@@ -1,12 +1,8 @@
 import { IoLogoLinkedin } from "react-icons/io5";
 import { MdEmail } from "react-icons/md";
 import { FaGithub } from "react-icons/fa";
+import { HoverRed } from "./Hover";
 
-const HoverRed = () => {
-  return (
-    <div className="group-hover:bg-red-500 absolute top-0 bottom-0 right-0 left-0 blur duration-300" />
-  );
-};
 
 export default function SocialsMenu() {
   return (

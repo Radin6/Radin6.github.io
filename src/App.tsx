@@ -1,5 +1,4 @@
 import { ReactNode } from "react";
-
 import profilePicture from "./assets/profile-pic.png";
 import web3BankPic from "./assets/web3-bank.png";
 import serviPic from "./assets/servi.png";
@@ -11,6 +10,7 @@ import SocialsMenu from "./components/SocialsMenu";
 import { BadgeClear } from "./components/Badge/BadgeClear";
 import { Project } from "./components/Project";
 import toast from 'react-hot-toast';
+import { HoverRed } from "./components/BlurBackground";
 
 interface ArticleProps {
   children?: ReactNode;
@@ -50,11 +50,14 @@ function Main() {
           </a>
         </div>
         <div className="w-full">
-          <img
-            src={profilePicture}
-            alt="profile picture"
-            className="w-[150px] md:w-[180px] rounded-full m-auto"
-          />
+          <div className="group relative w-[150px] md:w-[180px] m-auto">
+            <div className="bg-red-500 rounded-full absolute top-0 bottom-0 right-0 left-0 blur-md duration-300 animate-pulse" />
+            <img
+              src={profilePicture}
+              alt="profile picture"
+              className="rounded-full bg-black blur-none"
+            />
+          </div>
         </div>
       </div>
     </section>
@@ -122,7 +125,7 @@ function Projects() {
       <div className="flex max-w-[600px] flex-col mx-4 md:w-[60%]">
         <hr className="border-[1px] border-white w-full" />
         <h2 className="text-3xl text-white text-center">Projects</h2>
-        <Project position="left" title="Servi" src={serviPic} href="#projects" onClick={()=>{toast.error("not available to show because is a private project at the moment")}}>
+        <Project position="left" title="Servi" src={serviPic} href="#projects" onClick={() => { toast.error("not available to show because is a private project at the moment") }}>
           I am actually working in this project as Front End Developer. Servi
           connects freelancers to people or businesses looking to hire, with a
           wide range of services.
@@ -161,7 +164,7 @@ function Projects() {
           href="https://radin6.github.io/ticketing-system-front/"
           targetBlank
         >
-          This is Ticketing system app where you can generate a user, 
+          This is Ticketing system app where you can generate a user,
           Log in and create tickets. It uses JWT to sign and save the user info on the cookies.
           It is a Full Stack project with MongoDB as database and deployed in Railway.
           <p className="text-slate-400 text-sm m-2">
@@ -219,7 +222,7 @@ function Projects() {
 function App() {
   return (
     <div className="bg-gradient-to-r from-[#171717] to-[#2E0202]">
-      <SocialsMenu/>
+      <SocialsMenu />
       <Main />
       <AboutMe />
       <Skills />
