@@ -10,7 +10,6 @@ import SocialsMenu from "./components/SocialsMenu";
 import { BadgeClear } from "./components/Badge/BadgeClear";
 import { Project } from "./components/Project";
 import toast from 'react-hot-toast';
-import { HoverRed } from "./components/BlurBackground";
 
 interface ArticleProps {
   children?: ReactNode;
