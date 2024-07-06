@@ -162,9 +162,8 @@ function Projects() {
           targetBlank
         >
           This is Ticketing system app where you can generate a user, 
-          log in and create tickets. I used Node JS and Express on the Back-End.
-          It uses JWT to sing and save the user info on the cookies.
-          On the Front-End I used Tailwind CSS, React and Typescript.
+          Log in and create tickets. It uses JWT to sign and save the user info on the cookies.
+          It is a Full Stack project with MongoDB as database and deployed in Railway.
           <p className="text-slate-400 text-sm m-2">
             Made on the Back-End with:
             <div className="flex flex-wrap gap-2">
