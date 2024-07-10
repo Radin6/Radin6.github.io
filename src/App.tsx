@@ -1,4 +1,4 @@
-import { ReactNode } from "react";
+import { ReactNode, useRef } from "react";
 import profilePicture from "./assets/profile-pic.png";
 import web3BankPic from "./assets/web3-bank.png";
 import serviPic from "./assets/servi.png";
@@ -10,6 +10,7 @@ import SocialsMenu from "./components/SocialsMenu";
 import { BadgeClear } from "./components/Badge/BadgeClear";
 import { Project } from "./components/Project";
 import toast from 'react-hot-toast';
+import { useIsVisible } from "./hooks/useIsVisible";
 
 interface ArticleProps {
   children?: ReactNode;
@@ -96,17 +97,20 @@ function AboutMe() {
 }
 
 function Skills() {
+  const ref1 = useRef(null);
+  const isVisible1 = useIsVisible(ref1);
   return (
     <section className="my-20 px-4 py-10 bg-[#171616]">
       <h2 className="text-3xl text-white text-center mt-3">Languages</h2>
-      <div className="flex gap-1 justify-center my-3 flex-wrap">
+      <div ref={ref1} className={`flex gap-3 justify-center my-3 flex-wrap transition-opacity ease-in duration-[2000ms] ${isVisible1 ? "opacity-100" : "opacity-0"}`}>
         <JS />
         <TS />
         <Solidity />
         <Python />
       </div>
+      <div className="w-full h-[50px]" />
       <h2 className="text-3xl text-white text-center mt-3">Technologies</h2>
-      <div className="flex gap-1 justify-center my-3 flex-wrap">
+      <div className={`flex gap-3 justify-center my-3 flex-wrap transition-opacity ease-in duration-[2000ms] ${isVisible1 ? "opacity-100" : "opacity-0"}`}>
         <React />
         <Next />
         <HTML />
