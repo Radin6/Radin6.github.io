@@ -97,7 +97,7 @@ function AboutMe() {
 }
 
 function Skills() {
-  const ref1 = useRef(null);
+  const ref1 = useRef<HTMLDivElement>(null);
   const isVisible1 = useIsVisible(ref1);
   return (
     <section className="my-20 px-4 py-10 bg-[#171616]">
@@ -145,24 +145,7 @@ function Projects() {
         </Project>
         <Project
           position="right"
-          title="News App"
-          src={newsApp}
-          href="https://radin6.github.io/news-app/"
-          targetBlank
-        >
-          It is a web where you search for news by text input, category,
-          language, country and even sorting them. This use the API of gnews.io
-          <p className="text-slate-400 text-sm m-2">
-            Made with:
-            <div className="flex flex-wrap gap-2">
-              <BadgeClear>JavaScript</BadgeClear>
-              <BadgeClear>React JS</BadgeClear>
-            </div>
-          </p>
-        </Project>
-        <Project
-          position="left"
-          title="Ticketing System (Under develop)"
+          title="Ticketing System"
           src={ticketingSystem}
           href="https://radin6.github.io/ticketing-system-front/"
           targetBlank
@@ -183,6 +166,23 @@ function Projects() {
               <BadgeClear>React JS</BadgeClear>
               <BadgeClear>TypeScript</BadgeClear>
               <BadgeClear>Tailwind CSS</BadgeClear>
+            </div>
+          </p>
+        </Project>
+        <Project
+          position="left"
+          title="News App"
+          src={newsApp}
+          href="https://radin6.github.io/news-app/"
+          targetBlank
+        >
+          It is a web where you search for news by text input, category,
+          language, country and even sorting them. This use the API of gnews.io
+          <p className="text-slate-400 text-sm m-2">
+            Made with:
+            <div className="flex flex-wrap gap-2">
+              <BadgeClear>JavaScript</BadgeClear>
+              <BadgeClear>React JS</BadgeClear>
             </div>
           </p>
         </Project>
