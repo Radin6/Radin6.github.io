@@ -1,16 +1,11 @@
 import { ReactNode, useRef } from "react";
 import profilePicture from "./assets/profile-pic.png";
-import web3BankPic from "./assets/web3-bank.png";
-import serviPic from "./assets/servi.png";
-import newsApp from "./assets/news-app.jpg";
-import onlineChat from "./assets/online-chat.png"
-import ticketingSystem from "./assets/ticketing-system.png"
 //import { Solidity, Python, JS, TS, HTML, CSS, Next, React, Tailwind, Github, NodeJS } from "./components/Badge/Badge";
 import SocialsMenu from "./components/SocialsMenu";
 import { BadgeClear } from "./components/Badge/BadgeClear";
 import { Project } from "./components/Project";
-import toast from 'react-hot-toast';
 import { useIsVisible } from "./hooks/useIsVisible";
+import { projectsData } from "./data/projectsData";
 
 interface ArticleProps {
   children?: ReactNode;
@@ -136,95 +131,31 @@ function Projects() {
       <div className="flex max-w-[600px] flex-col mx-4 md:w-[60%]">
         <hr className="border-[1px] border-white w-full" />
         <h2 className="text-3xl my-5 text-white text-center">Projects</h2>
-        <Project position="left" title="Servi" src={serviPic} href="#projects" onClick={() => { toast.error("not available to show because is a private project at the moment") }}>
-          I am actually working in this project as Front End Developer. Servi
-          connects freelancers to people or businesses looking to hire, with a
-          wide range of services.
-          <p className="text-slate-400 text-sm m-2">
-            Made with:
-            <div className="flex flex-wrap gap-2">
-              <BadgeClear>JavaScript</BadgeClear>
-              <BadgeClear>React JS</BadgeClear>
-              <BadgeClear>Next JS</BadgeClear>
-              <BadgeClear>Tailwind CSS</BadgeClear>
-              <BadgeClear>Zustand</BadgeClear>
-            </div>
-          </p>
-        </Project>
-        <Project
-          position="right"
-          title="Ticketing System"
-          src={ticketingSystem}
-          href="https://radin6.github.io/ticketing-system-front/"
-          targetBlank
-        >
-          This is Ticketing system app where you can generate a user,
-          Log in and create tickets. It uses JWT to sign and save the user info on the cookies.
-          It is a Full Stack project with MongoDB as database and deployed in Railway.
-          <p className="text-slate-400 text-sm m-2">
-            Made on the Back-End with:
-            <div className="flex flex-wrap gap-2">
-              <BadgeClear>Node JS</BadgeClear>
-              <BadgeClear>Express</BadgeClear>
-            </div>
-          </p>
-          <p className="text-slate-400 text-sm m-2">
-            Made on the Fron-End with:
-            <div className="flex flex-wrap gap-2">
-              <BadgeClear>React JS</BadgeClear>
-              <BadgeClear>TypeScript</BadgeClear>
-              <BadgeClear>Tailwind CSS</BadgeClear>
-            </div>
-          </p>
-        </Project>
-        <Project
-          position="left"
-          title="News App"
-          src={newsApp}
-          href="https://radin6.github.io/news-app/"
-          targetBlank
-        >
-          It is a web where you search for news by text input, category,
-          language, country and even sorting them. This use the API of gnews.io
-          <p className="text-slate-400 text-sm m-2">
-            Made with:
-            <div className="flex flex-wrap gap-2">
-              <BadgeClear>JavaScript</BadgeClear>
-              <BadgeClear>React JS</BadgeClear>
-            </div>
-          </p>
-        </Project>
-        <Project position="right" title="Real Time Chat" src={onlineChat} href="https://real-time-chat-app-vhjf.onrender.com/" targetBlank>
-          This is a simple online chat application using HTML, CSS, and JavaScript with Socket.IO for real-time communication.
-          You get an username and is stored in localStorage. You can open 2 browser and give a try to the chat.
-          <p className="text-slate-400 text-sm m-2">
-            Made with:
-            <div className="flex flex-wrap gap-2">
-              <BadgeClear>Node JS</BadgeClear>
-              <BadgeClear>Sockets.IO</BadgeClear>
-              <BadgeClear>Express</BadgeClear>
-              <BadgeClear>HTML</BadgeClear>
-              <BadgeClear>CSS</BadgeClear>
-            </div>
-          </p>
-        </Project>
-        <Project
-          position="left"
-          title="Web3 Bank"
-          src={web3BankPic}
-          href="https://radin6.github.io/portfolio-projects/bank-project/bank-project.html"
-          targetBlank
-        >
-          This is a simple Smart contract and Webpage that simulate a Bank.
-          Back-End: Solidity, Javascript, Front-End: Javascript, HTML and CSS
-          <p className="text-slate-400 text-sm m-2">
-            Made with:
-            <div className="flex flex-wrap gap-2">
-              <BadgeClear>JavaScript</BadgeClear>
-              <BadgeClear>Solidity</BadgeClear>
-            </div>
-          </p>
-        </Project>
+        {projectsData.map((project, index) =>
+          <Project key={project.title} position={index % 2 ? "left" : "right"} title={project.title} src={project.src} href={project.href} onClick={project.onClick}>
+            <p>{project.description}</p>
+            {project.madeWith?.backend.length !== 0 &&
+              <p className="text-slate-400 text-sm m-2">
+                Made on the Back-End with:
+                <div className="flex flex-wrap gap-2">
+                  {
+                    project.madeWith?.backend.map(element => <BadgeClear key={element}>{element}</BadgeClear>)
+                  }
+                </div>
+              </p>
+            }
+            {project.madeWith?.frontend.length !== 0 &&
+              <p className="text-slate-400 text-sm m-2">
+                Made on the Fron-End with:
+                <div className="flex flex-wrap gap-2">
+                {
+                  project.madeWith?.frontend.map(element => <BadgeClear key={element}>{element}</BadgeClear>)
+                }
+                </div>
+              </p>
+            }
+          </Project>
+        )}
       </div>
     </section>
   );
