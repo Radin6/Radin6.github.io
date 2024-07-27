@@ -5,7 +5,7 @@ import serviPic from "./assets/servi.png";
 import newsApp from "./assets/news-app.jpg";
 import onlineChat from "./assets/online-chat.png"
 import ticketingSystem from "./assets/ticketing-system.png"
-import { Solidity, Python, JS, TS, HTML, CSS, Next, React, Tailwind, Github } from "./components/Badge/Badge";
+//import { Solidity, Python, JS, TS, HTML, CSS, Next, React, Tailwind, Github, NodeJS } from "./components/Badge/Badge";
 import SocialsMenu from "./components/SocialsMenu";
 import { BadgeClear } from "./components/Badge/BadgeClear";
 import { Project } from "./components/Project";
@@ -69,7 +69,7 @@ function AboutMe() {
     <section id="about-me" className="flex flex-col items-center">
       <div className="flex max-w-[600px] flex-col mx-4 md:w-[60%]">
         <hr className="border-[1px] border-white w-full" />
-        <h2 className="text-3xl text-white text-center">About Me</h2>
+        <h2 className="text-3xl my-5 text-white text-center">About Me</h2>
         <Article title="Past">
           I have always liked exact sciences, that's why I became a Chemistry
           Technician and then, a Food Industry Technician. Although I like them,
@@ -100,23 +100,31 @@ function Skills() {
   const ref1 = useRef<HTMLDivElement>(null);
   const isVisible1 = useIsVisible(ref1);
   return (
-    <section className="my-20 px-4 py-10 bg-[#171616]">
+    <section className="my-20 px-4 py-10 bg-gradient-to-t from-transparent via-[#171616] via-[percentage:10%_90%] to-transparent">
       <h2 className="text-3xl text-white text-center mt-3">Languages</h2>
       <div ref={ref1} className={`flex gap-3 justify-center my-3 flex-wrap transition-opacity ease-in duration-[2000ms] ${isVisible1 ? "opacity-100" : "opacity-0"}`}>
-        <JS />
-        <TS />
-        <Solidity />
-        <Python />
+        {/* JS */}
+        <img className="w-[90px]" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg" />
+        {/* TS */}
+        <img className="w-[90px]" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/typescript/typescript-original.svg" />
       </div>
       <div className="w-full h-[50px]" />
       <h2 className="text-3xl text-white text-center mt-3">Technologies</h2>
       <div className={`flex gap-3 justify-center my-3 flex-wrap transition-opacity ease-in duration-[2000ms] ${isVisible1 ? "opacity-100" : "opacity-0"}`}>
-        <React />
-        <Next />
-        <HTML />
-        <CSS />
-        <Tailwind />
-        <Github />
+        {/* Node JS */}
+        <img className="w-[100px]" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/nodejs/nodejs-original-wordmark.svg" />
+        {/* React */}
+        <img className="w-[100px]" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/react/react-original-wordmark.svg" />
+        {/* HTML */}
+        <i className="devicon-html5-plain-wordmark colored text-[90px] text-[#E34F26]"></i>
+        {/* CSS */}
+        <i className="devicon-css3-plain-wordmark text-[90px] text-[#1572B6]"></i>
+        {/* Tailwind */}
+        <img className="w-[100px]" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" />
+        {/* Github */}
+
+        <i className="devicon-github-original-wordmark text-[90px] text-white"></i>
+
       </div>
     </section>
   );
@@ -127,7 +135,7 @@ function Projects() {
     <section id="projects" className="flex flex-col items-center">
       <div className="flex max-w-[600px] flex-col mx-4 md:w-[60%]">
         <hr className="border-[1px] border-white w-full" />
-        <h2 className="text-3xl text-white text-center">Projects</h2>
+        <h2 className="text-3xl my-5 text-white text-center">Projects</h2>
         <Project position="left" title="Servi" src={serviPic} href="#projects" onClick={() => { toast.error("not available to show because is a private project at the moment") }}>
           I am actually working in this project as Front End Developer. Servi
           connects freelancers to people or businesses looking to hire, with a

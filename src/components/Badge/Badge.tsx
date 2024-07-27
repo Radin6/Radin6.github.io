@@ -61,3 +61,9 @@ export function Github() {
     <img className="h-[30px]" src="https://img.shields.io/badge/-Github-181717?logo=github" alt="" />
   )
 }
+
+export function NodeJS() {
+  return(
+    <img className="h-[30px]" src="https://img.shields.io/badge/-Node%20JS-5FA04E?logo=nodedotjs&logoColor=white" alt="node js icon" />
+  )
+}
