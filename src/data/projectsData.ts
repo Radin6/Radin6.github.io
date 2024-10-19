@@ -25,9 +25,9 @@ export const projectsData : Array<projectsDataProps> = [
           connects freelancers to people or businesses looking to hire, with a
           wide range of services.`,
     src: serviPic,
-    href: "#projects",
-    targetBlank: false,
-    onClick:  ()=>toast.error("not available to show because is a private project at the moment") ,
+    href: "https://servi-portfolio.vercel.app/",
+    targetBlank: true,
+    onClick:  ()=>{} ,
     madeWith: {
       frontend: ["JavaScript", "React JS", "Next JS", "Tailwind CSS", "Zustand",],
       backend: [],

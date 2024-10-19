@@ -31,14 +31,14 @@ function Main() {
         <div className="">
           <h1 className="text-4xl text-white">Hi, I am Nicolás</h1>
           <h1 className="text-4xl text-red-800 font-bold">
-            Front End Developer
+            Software Engineer
           </h1>
           <p className="text-white text-lg mt-2">
-            I'm a junior Front End Developer based in Italy. I'm currently
-            working as Front End at Servi and studying a long-term Full Stack
-            Development course taught by university professors.
+            I'm based in Italy and currently
+            working as Front End at Servi. I'm studying a Bachelor's degree 
+            in Computer Engineering at the University Unimarconi.
           </p>
-          <a href="cv-en.pdf" download>
+          <a href="cv-nicolas-ramos.docx" download>
             <button className="border-[1px] border-red-800 rounded-md p-1 my-3 text-red-800 hover:bg-white hover:bg-opacity-5 transition ease-in-out delay-100">
               Get my resumee
             </button>
@@ -117,7 +117,6 @@ function Skills() {
         {/* Tailwind */}
         <img className="w-[100px]" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" />
         {/* Github */}
-
         <i className="devicon-github-original-wordmark text-[90px] text-white"></i>
 
       </div>
@@ -132,7 +131,7 @@ function Projects() {
         <hr className="border-[1px] border-white w-full" />
         <h2 className="text-3xl my-5 text-white text-center">Projects</h2>
         {projectsData.map((project, index) =>
-          <Project key={project.title} position={index % 2 ? "left" : "right"} title={project.title} src={project.src} href={project.href} onClick={project.onClick}>
+          <Project key={project.title} position={index % 2 ? "left" : "right"} title={project.title} src={project.src} href={project.href} targetBlank={project.targetBlank} onClick={project.onClick}>
             <p>{project.description}</p>
             {project.madeWith?.backend.length !== 0 &&
               <p className="text-slate-400 text-sm m-2">
