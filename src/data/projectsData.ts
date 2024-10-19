@@ -1,9 +1,8 @@
 import web3BankPic from "../assets/web3-bank.png";
 import serviPic from "../assets/servi.png";
 import newsApp from "../assets/news-app.jpg";
-import onlineChat from "../assets/online-chat.png"
-import ticketingSystem from "../assets/ticketing-system.png"
-import toast from 'react-hot-toast';
+import onlineChat from "../assets/online-chat.png";
+import ticketingSystem from "../assets/ticketing-system.png";
 
 type projectsDataProps = {
   title: string,
