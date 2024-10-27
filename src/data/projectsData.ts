@@ -43,7 +43,7 @@ export const projectsData : Array<projectsDataProps> = [
     onClick: () => {},
     madeWith: {
       frontend: ["TypeScript", "React JS", "Tailwind CSS", "Zustand"],
-      backend: ["Node JS", "Express"],
+      backend: ["Node JS", "Express", "MongoDB"],
     }
   },
   {
