@@ -29,7 +29,7 @@ function Main() {
     >
       <div className="max-w-[600px] flex flex-col mx-4 md:flex-row md:w-[60%]">
         <div className="">
-          <h1 className="text-4xl text-white">Hi, I am Nicolás</h1>
+          <h1 className="text-4xl text-white">I'm Nicolás</h1>
           <h1 className="text-4xl text-red-800 font-bold">
             Software Engineer
           </h1>
@@ -61,7 +61,7 @@ function Main() {
 
 function AboutMe() {
   return (
-    <section id="about-me" className="flex flex-col items-center">
+    <section id="about-me" className="flex flex-col items-center pb-10">
       <div className="flex max-w-[600px] flex-col mx-4 md:w-[60%]">
         <hr className="border-[1px] border-white w-full" />
         <h2 className="text-3xl my-5 text-white text-center">About Me</h2>
@@ -118,7 +118,11 @@ function Skills() {
         <img className="w-[100px]" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg" />
         {/* Github */}
         <i className="devicon-github-original-wordmark text-[90px] text-white"></i>
-
+        {/* MySQL */}
+        <img className="w-[100px]" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mysql/mysql-original-wordmark.svg" />
+        {/* MongoDb */}
+        <img className="w-[100px]" src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/mongodb/mongodb-original-wordmark.svg" />
+          
       </div>
     </section>
   );
@@ -131,7 +135,16 @@ function Projects() {
         <hr className="border-[1px] border-white w-full" />
         <h2 className="text-3xl my-5 text-white text-center">Projects</h2>
         {projectsData.map((project, index) =>
-          <Project key={project.title} position={index % 2 ? "left" : "right"} title={project.title} src={project.src} href={project.href} targetBlank={project.targetBlank} onClick={project.onClick}>
+          <Project 
+            key={project.title} 
+            position={index % 2 ? "left" : "right"} 
+            title={project.title} 
+            src={project.src} 
+            href={project.href} 
+            targetBlank={project.targetBlank} 
+            onClick={project.onClick} 
+            link={project.link}
+            >
             <p>{project.description}</p>
             {project.madeWith?.backend.length !== 0 &&
               <p className="text-slate-400 text-sm m-2">
@@ -165,9 +178,9 @@ function App() {
     <div className="bg-gradient-to-r from-[#171717] to-[#2E0202]">
       <SocialsMenu />
       <Main />
-      <AboutMe />
-      <Skills />
       <Projects />
+      <Skills />
+      <AboutMe />
     </div>
   );
 }

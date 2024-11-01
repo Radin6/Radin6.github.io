@@ -1,7 +1,7 @@
 import web3BankPic from "../assets/web3-bank.png";
 import serviPic from "../assets/servi.png";
 import newsApp from "../assets/news-app.jpg";
-import onlineChat from "../assets/online-chat.png";
+// import onlineChat from "../assets/online-chat.png";
 import ticketingSystem from "../assets/ticketing-system.png";
 
 type projectsDataProps = {
@@ -9,6 +9,7 @@ type projectsDataProps = {
   description: string,
   src: string,
   href: string,
+  link?: string,
   targetBlank: boolean,
   onClick: () => void,
   madeWith?: {
@@ -25,6 +26,7 @@ export const projectsData : Array<projectsDataProps> = [
           wide range of services.`,
     src: serviPic,
     href: "https://servi-portfolio.vercel.app/",
+    link: "https://www.youtube.com/embed/QBxsYLTKmu0?si=faHgPNAdA7U0NvFJ",
     targetBlank: true,
     onClick:  ()=>{} ,
     madeWith: {
@@ -39,6 +41,7 @@ export const projectsData : Array<projectsDataProps> = [
           It is a Full Stack project with MongoDB as database and deployed in Railway.`,
     src: ticketingSystem,
     href: "https://radin6.github.io/ticketing-system-front/",
+    link: "https://www.youtube.com/embed/8Kc4eP0i5QE?si=Pq0-Hq5ZfIo5d7_u",
     targetBlank: true,
     onClick: () => {},
     madeWith: {
@@ -59,19 +62,19 @@ export const projectsData : Array<projectsDataProps> = [
       backend: [],
     }
   },
-  {
-    title: "Real Time Chat",
-    description: `This is a simple online chat application using HTML, CSS, and JavaScript with Socket.IO for real-time communication.
-          You get an username and is stored in localStorage. You can open 2 browser and give a try to the chat.`,
-    src: onlineChat,
-    href: "https://real-time-chat-app-vhjf.onrender.com/",
-    targetBlank: true,
-    onClick: () => {},
-    madeWith: {
-      frontend: ["HTML", "CSS"],
-      backend: ["Node JS", "Sockets.IO", "Express"],
-    }
-  },
+  // {
+  //   title: "Real Time Chat",
+  //   description: `This is a simple online chat application using HTML, CSS, and JavaScript with Socket.IO for real-time communication.
+  //         You get an username and is stored in localStorage. You can open 2 browser and give a try to the chat.`,
+  //   src: onlineChat,
+  //   href: "https://real-time-chat-app-vhjf.onrender.com/",
+  //   targetBlank: true,
+  //   onClick: () => {},
+  //   madeWith: {
+  //     frontend: ["HTML", "CSS"],
+  //     backend: ["Node JS", "Sockets.IO", "Express"],
+  //   }
+  // },
   {
     title: "Web3 Bank",
     description: `This is a simple Smart contract and Webpage that simulate a Bank.

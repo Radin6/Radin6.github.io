@@ -1,7 +1,7 @@
 import { IoLogoLinkedin } from "react-icons/io5";
 import { MdEmail } from "react-icons/md";
 import { FaGithub } from "react-icons/fa";
-import { HoverRed } from "./Hover";
+import HoverRed from "./Hover";
 
 
 export default function SocialsMenu() {
