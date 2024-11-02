@@ -1,9 +1,9 @@
 import { IoLogoYoutube } from "react-icons/io";
 import { FaPager } from "react-icons/fa6";
 
-import YoutubeVideo from "./YoutubeVideo";
+import YoutubeVideo from "../YoutubeVideo";
 import { useState } from "react";
-import HoverRed from "./Hover";
+import HoverRed from "../Hover";
 
 interface ProjectProps {
   children?: React.ReactNode,
