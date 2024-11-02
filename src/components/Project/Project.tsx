@@ -5,6 +5,8 @@ import YoutubeVideo from "../YoutubeVideo";
 import { useState } from "react";
 import HoverRed from "../Hover";
 
+import { motion, Variants } from "framer-motion";
+
 interface ProjectProps {
   children?: React.ReactNode,
   position: 'left' | 'right',
@@ -18,6 +20,16 @@ interface ProjectProps {
   key?: string
 }
 
+const variantLeft: Variants = {
+  offscreen: { opacity: 0, x: -100 },
+  onscreen: { opacity: 1, x: 0, transition: { duration: 0.8 } },
+};
+
+const variantsRight: Variants = {
+  offscreen: { opacity: 0, x: 100 },
+  onscreen: { opacity: 1, x: 0, transition: { duration: 0.8 } },
+};
+
 export function Project({ children, position, src, title, href, targetBlank, onClick, className = "", key, link }: ProjectProps) {
   const [isOpen, setIsOpen] = useState(false);
 
@@ -27,7 +39,13 @@ export function Project({ children, position, src, title, href, targetBlank, onC
   }
 
   return (
-    <article key={key} className="p-3 my-3 border-[1px] border-red-800 rounded-lg">
+    <motion.section 
+      key={key} 
+      className="p-3 my-3 border-[1px] border-red-800 rounded-lg"
+      variants={position === "left" ? variantLeft : variantsRight} 
+      initial="offscreen" 
+      whileInView="onscreen"
+      >
       <h4 className="text-white font-bold text-xl text-center p-3">{title}</h4>
       <div className={`flex flex-col md:flex-row ${position == "left" ? "" : "flex-col md:flex-row-reverse"}`}>
         <div className="max-h-[250px] mx-auto">
@@ -52,6 +70,6 @@ export function Project({ children, position, src, title, href, targetBlank, onC
         </a>
       </div>
       <YoutubeVideo isOpen={isOpen} setIsOpen={setIsOpen} link={link} />
-    </article>
+    </motion.section>
   );
 }

@@ -1,6 +1,4 @@
-//import { Solidity, Python, JS, TS, HTML, CSS, Next, React, Tailwind, Github, NodeJS } from "./components/Badge/Badge";
 import SocialsMenu from "./components/SocialsMenu";
-import { motion, Variants } from "framer-motion";
 
 // import sections
 import Main from "./sections/Main";
