@@ -24,7 +24,6 @@ function Main() {
             <button className="border-[1px] border-red-800 rounded-md p-1 my-3 text-red-800 hover:bg-white hover:bg-opacity-10 transition ease-in-out delay-100 blur-none">
               Get my resumee
             </button>
-            
           </a>
         </div>
         <div className="w-full">
