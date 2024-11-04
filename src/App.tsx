@@ -8,7 +8,7 @@ import Skills from "./sections/Skills";
 
 function App() {
   return (
-    <div className="bg-gradient-to-r from-[#171717] to-[#2E0202]">
+    <div className="bg-gradient-to-r from-[#171717] to-[#2E0202] overflow-hidden">
       <SocialsMenu />
       <Main />
       <Projects />

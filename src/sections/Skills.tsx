@@ -1,16 +1,24 @@
+import { motion } from "framer-motion";
+
 function Skills() {
 
   return (
     <section
       className="my-20 px-4 py-10 bg-gradient-to-t from-transparent via-[#171616] via-[percentage:10%_90%] to-transparent">
-       <h2 className="text-3xl text-white text-center mt-3">Languages</h2>
+      <h2 className="text-3xl text-white text-center mt-3">Languages</h2>
+      <motion.div
+          initial={{opacity: 0.2, scale: 1, rotate: 0}}
+          whileInView={{ opacity: 1, scale: 1, rotate:0, transition: { duration: 1 }, }}
+        >
       <div className="flex gap-3 justify-center my-3 flex-wrap">
         {/* JS */}
+        
         <img
           className="w-[90px]"
           src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/javascript/javascript-original.svg"
           alt="JavaScript"
         />
+        
         {/* TS */}
         <img
           className="w-[90px]"
@@ -18,7 +26,7 @@ function Skills() {
           alt="TypeScript"
         />
       </div>
-
+      
       <div className="w-full h-[50px]" />
 
       <h2 className="text-3xl text-white text-center mt-3">Technologies</h2>
@@ -69,6 +77,7 @@ function Skills() {
           alt="MongoDB"
         />
       </div>
+      </motion.div>
     </section>
   );
 }
