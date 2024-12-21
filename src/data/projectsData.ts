@@ -1,6 +1,7 @@
 import web3BankPic from "../assets/web3-bank.png";
 import serviPic from "../assets/servi.png";
 import newsApp from "../assets/news-app.jpg";
+import twotter from "../assets/twotter2.png";
 // import onlineChat from "../assets/online-chat.png";
 import ticketingSystem from "../assets/ticketing-system.png";
 
@@ -32,6 +33,20 @@ export const projectsData : Array<projectsDataProps> = [
     madeWith: {
       frontend: ["JavaScript", "React JS", "Next JS", "Tailwind CSS", "Zustand",],
       backend: [],
+    }
+  },
+  {
+    title: "Twotter",
+    description: `Twotter is a social media app inspired by Twitter, 
+        designed to enable users to share short posts, 
+        interact with others through likes and comments, and engage in discussions.`,
+    src: twotter,
+    href: "https://twotter-dun.vercel.app/",
+    targetBlank: true,
+    onClick:  ()=>{} ,
+    madeWith: {
+      frontend: ["TypeScript", "React JS", "Tailwind CSS", "Zustand"],
+      backend: ["Node Js", "Express JS", "MySQL", "Cloudinary"],
     }
   },
   {
