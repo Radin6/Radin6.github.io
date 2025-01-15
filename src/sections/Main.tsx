@@ -19,7 +19,7 @@ function Main() {
             working as Front End at Servi. I'm studying a Bachelor's degree
             in Computer Engineering at the University Unimarconi.
           </p>
-          <a href="cv-nicolas-ramos.docx" className="group relative" download>
+          <a href="cv-nicolas-ramos.pdf" className="group relative" download>
             <HoverRed />
             <button className="border-[1px] border-red-800 rounded-md p-1 my-3 text-red-800 hover:bg-white hover:bg-opacity-10 transition ease-in-out delay-100 blur-none">
               Get my resumee
