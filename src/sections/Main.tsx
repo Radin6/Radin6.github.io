@@ -17,7 +17,7 @@ function Main() {
           <p className="text-white text-lg mt-2">
             I'm based in Italy and currently
             working as Front End at Servi. I'm studying a Bachelor's degree
-            in Computer Engineering at the University Unimarconi.
+            in Computer Engineering at University Unimarconi.
           </p>
           <a href="cv-nicolas-ramos.pdf" className="group relative" download>
             <HoverRed />

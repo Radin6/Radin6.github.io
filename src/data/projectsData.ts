@@ -2,6 +2,7 @@ import web3BankPic from "../assets/web3-bank.png";
 import serviPic from "../assets/servi.png";
 import newsApp from "../assets/news-app.jpg";
 import twotter from "../assets/twotter2.png";
+import ewy from "../assets/ewy.png";
 // import onlineChat from "../assets/online-chat.png";
 import ticketingSystem from "../assets/ticketing-system.png";
 
@@ -47,6 +48,20 @@ export const projectsData : Array<projectsDataProps> = [
     madeWith: {
       frontend: ["TypeScript", "React JS", "Tailwind CSS", "Zustand"],
       backend: ["Node Js", "Express JS", "MySQL", "Cloudinary"],
+    }
+  },
+  {
+    title: "English With Yani",
+    description: `This is a static page for a teacher of English. 
+          It is an informative page with a payment system for the classes.
+          It has a domain and is hosted in Vercel.`,
+    src: ewy,
+    href: "https://englishwithyani.com/",
+    targetBlank: true,
+    onClick:  ()=>{} ,
+    madeWith: {
+      frontend: ["Next JS", "Tailwind CSS"],
+      backend: [],
     }
   },
   {
