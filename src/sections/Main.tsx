@@ -21,7 +21,7 @@ function Main() {
           </p>
           <a href="cv-nicolas-ramos.pdf" className="group relative" download>
             <HoverRed />
-            <button className="border-[1px] border-red-800 rounded-md p-1 my-3 text-red-800 hover:bg-white hover:bg-opacity-10 transition ease-in-out delay-100 blur-none">
+            <button className="border-[1px] border-red-800 rounded-md p-1 my-3 text-red-800 hover:bg-white hover:bg-opacity-10 hover:border-transparent transition ease-in-out delay-100 blur-none">
               Get my resumee
             </button>
           </a>
