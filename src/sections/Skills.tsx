@@ -79,6 +79,12 @@ function Skills() {
             src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/tailwindcss/tailwindcss-original.svg"
             alt="Tailwind CSS"
           />
+          {/* Spring */}
+          <img
+            className="w-[100px]"
+            src="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/icons/spring/spring-original-wordmark.svg"
+            alt="Tailwind CSS"
+          />
           {/* Github */}
           <i
             className="devicon-github-original-wordmark text-[90px] text-white"
