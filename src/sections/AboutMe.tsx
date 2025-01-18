@@ -10,25 +10,25 @@ function AboutMe() {
         <hr className="border-[1px] border-white w-full" />
         <h2 className="text-3xl my-5 text-white text-center">About Me</h2>
         <Article title="Past">
-          I have always liked exact sciences, that's why I became a Chemistry
-          Technician and then, a Food Industry Technician. Although I like them,
-          I felt there was not so much to innovate in this area, so I decided to
-          transition to Web Development, as it is governed by rules like the
-          exact sciences. This field/industry is open to innovation and
-          creativity. Above all, it is a changing world and there is so much to
-          discover.
+          I am originally from Argentina and currently living in Italy.
+          My background has always been around exact sciences.
+          In Argentina, I got a degree in Chemistry and then I became a Food Industry Technician.
+          However, my passion for innovation and creativity led me to transition into Full Stack development.
+          This field follows structured rules as exact sciences, but offers opportunities for innovation.
         </Article>
         <Article title="Present">
           I am currently working on a project called Servi, which is a
-          marketplace for freelance jobs. At the same time, I am studying Full
-          Stack Development specializing in blockchain. I’m also working on a
-          course. I teach individual and group lessons about blockchain
+          marketplace for freelance jobs. At the same time,
+          I am studying studying a Bachelor's Degree in Computer engineering to perfect my skills.
+          I am also working on a course. I teach individual and group lessons about blockchain
           technology and how to interact with it.
         </Article>
         <Article title="Future">
-          In the future, I find myself specializing in branches of development
-          that interest me since I enjoy continuous learning. Especially, I see
-          myself bringing that knowledge into projects I am part of.
+          I see myself as a professional in computer engineering.
+          I see myself taking on more responsibilities,
+          where I can mentor junior developers and enhance innovative projects.
+          I am committed to continuous learning and want to be part of a company 
+          that values growth and development, contributing to its success through my technical expertise and collaborative approach.
         </Article>
       </div>
     </section>
