@@ -1,8 +1,9 @@
 import web3BankPic from "../assets/web3-bank.png";
 import serviPic from "../assets/servi.png";
 import newsApp from "../assets/news-app.jpg";
-import twotter from "../assets/twotter2.png";
+import twotter from "../assets/twotter-portada.png";
 import ewy from "../assets/ewy.png";
+import qrtonicPic from "../assets/qrtonic-portada.png";
 // import onlineChat from "../assets/online-chat.png";
 import ticketingSystem from "../assets/ticketing-system.png";
 
@@ -20,17 +21,30 @@ type projectsDataProps = {
   }
 }
 
-export const projectsData : Array<projectsDataProps> = [
+export const projectsData: Array<projectsDataProps> = [
+  {
+    title: "QRtonic",
+    description: `QRtonic is a dynamic QR menu generator for restaurants, allowing them to create and manage their digital menus with ease. 
+        It supports multiple languages, category organization, and real-time updates through a clean admin interface.`,
+    src: qrtonicPic,
+    href: "https://qrtonic-website.vercel.app/en",
+    targetBlank: true,
+    onClick: () => { },
+    madeWith: {
+      frontend: ["TypeScript", "React JS", "Next JS", "Tailwind CSS"],
+      backend: [],
+    }
+  },
   {
     title: "Servi",
     description: `I am actually working in this project as Front End Developer. Servi
           connects freelancers to people or businesses looking to hire, with a
           wide range of services.`,
     src: serviPic,
-    href: "https://servi-portfolio.vercel.app/",
-    link: "https://www.youtube.com/embed/QBxsYLTKmu0?si=faHgPNAdA7U0NvFJ",
+    href: "https://servi.ar/en",
+    link: "", // https://www.youtube.com/embed/QBxsYLTKmu0?si=faHgPNAdA7U0NvFJ
     targetBlank: true,
-    onClick:  ()=>{} ,
+    onClick: () => { },
     madeWith: {
       frontend: ["JavaScript", "React JS", "Next JS", "Tailwind CSS", "Zustand",],
       backend: [],
@@ -44,7 +58,7 @@ export const projectsData : Array<projectsDataProps> = [
     src: twotter,
     href: "https://twotter-dun.vercel.app/",
     targetBlank: true,
-    onClick:  ()=>{} ,
+    onClick: () => { },
     madeWith: {
       frontend: ["TypeScript", "React JS", "Tailwind CSS", "Zustand"],
       backend: ["Node Js", "Express JS", "MySQL", "Cloudinary"],
@@ -58,9 +72,9 @@ export const projectsData : Array<projectsDataProps> = [
     src: ewy,
     href: "https://englishwithyani.com/",
     targetBlank: true,
-    onClick:  ()=>{} ,
+    onClick: () => { },
     madeWith: {
-      frontend: ["Next JS", "Tailwind CSS"],
+      frontend: ["React JS", "Tailwind CSS"],
       backend: [],
     }
   },
@@ -73,7 +87,7 @@ export const projectsData : Array<projectsDataProps> = [
     href: "https://radin6.github.io/ticketing-system-front/",
     link: "https://www.youtube.com/embed/8Kc4eP0i5QE?si=Pq0-Hq5ZfIo5d7_u",
     targetBlank: true,
-    onClick: () => {},
+    onClick: () => { },
     madeWith: {
       frontend: ["TypeScript", "React JS", "Tailwind CSS", "Zustand"],
       backend: ["Node JS", "Express", "MongoDB"],
@@ -86,7 +100,7 @@ export const projectsData : Array<projectsDataProps> = [
     src: newsApp,
     href: "https://radin6.github.io/news-app/",
     targetBlank: true,
-    onClick: () => {},
+    onClick: () => { },
     madeWith: {
       frontend: ["JavaScript", "React JS", "CSS"],
       backend: [],
@@ -112,7 +126,7 @@ export const projectsData : Array<projectsDataProps> = [
     src: web3BankPic,
     href: "https://radin6.github.io/portfolio-projects/bank-project/bank-project.html",
     targetBlank: true,
-    onClick: () => {},
+    onClick: () => { },
     madeWith: {
       frontend: ["JavaScript"],
       backend: ["Solidity"],

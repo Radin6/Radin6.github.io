@@ -17,8 +17,8 @@ function AboutMe() {
           This field follows structured rules as exact sciences, but offers opportunities for innovation.
         </Article>
         <Article title="Present">
-          I am currently working on a project called Servi, which is a
-          marketplace for freelance jobs. At the same time,
+          I am currently working on a project called QRTonic, in which we are developing a
+          smart menu app. At the same time,
           I am studying studying a Bachelor's Degree in Computer engineering to perfect my skills.
           I am also working on a course. I teach individual and group lessons about blockchain
           technology and how to interact with it.
