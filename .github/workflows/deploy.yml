@@ -28,11 +28,14 @@ jobs:
       - name: Build project
         run: npm run build
 
+      - name: Debug build output
+        run: ls -al ./dist || echo "No build output found."
+
       - name: Upload production-ready build files
         uses: actions/upload-artifact@v3
         with:
           name: production-files
-          path: ./dist  # Ensure this is the correct path to your build files
+          path: ./dist
 
   deploy:
     name: Deploy
